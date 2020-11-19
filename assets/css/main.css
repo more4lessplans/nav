@@ -3259,9 +3259,9 @@ input, select, textarea {
 			-webkit-animation: none;
 			-ms-animation: none;
 			animation: none;
-			background: none;
+			background: #grey;
 			color: rgba(255, 255, 255, 0.75);
-			position: absolute;
+			position: fixed;
 		}
 
 			#header.alt nav > ul > li a:not(.button).icon:before {
