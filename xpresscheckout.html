@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Purchase Product</title>
+		<title>Checkout</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -95,9 +95,9 @@
 					<div class="container">
 						<header class="major">
 							<h2><ul class="icons labeled">
-	<li><span class="icon solid fa-tag">  $50 </h2>
+	<li><span class="icon solid fa-tag">  $20 </h2>
 						 
-											<p>Heads Up:</p>
+											<p>Xpresspost next-day and 2-day shipping:</p>
 								</header>
 						
 				
@@ -106,7 +106,7 @@
 						
 						
 						
-	<p>Once your payment is recieved we will be sending the full product details to your email. Please remember to check your junk/spam folder. It may take a few hours to recieve your product.&nbsp; &nbsp;</p>
+	<p>Your SIM card will ship withn 24 business hours of purchase.&nbsp; &nbsp;</p>
 							
 			&nbsp;
 						  </header>
@@ -131,7 +131,7 @@
       paypal.Buttons({
         style: {
           shape: 'rect',
-          color: 'silver',
+          color: 'blue',
           layout: 'vertical',
           label: 'paypal',
           
@@ -139,7 +139,7 @@
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"CAD","value":56.5,"breakdown":{"item_total":{"currency_code":"CAD","value":50},"shipping":{"currency_code":"CAD","value":0},"tax_total":{"currency_code":"CAD","value":6.5}}}}]
+            purchase_units: [{"amount":{"currency_code":"CAD","value":22.6,"breakdown":{"item_total":{"currency_code":"CAD","value":20},"shipping":{"currency_code":"CAD","value":0},"tax_total":{"currency_code":"CAD","value":2.6}}}}]
           });
         },
 
@@ -156,7 +156,6 @@
     }
     initPayPalButton();
   </script>
-								 
 								 
 								 
 								 
