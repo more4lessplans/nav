@@ -99,18 +99,23 @@
 	  <p>Almost there!</p>
 								</header>
 						
-								<form method="post" action="https://forms.un-static.com/forms/46b90d2273547180453f1a78a43561d8850c8996">
+							<form action="https://getsimpleform.com/messages?form_api_token=568afc09cd59b87187daecf90da98f44" method="post">
+
+  <input type='hidden' name='redirect_to' value='http://more4lessplans.ca/paypal' />
        
 							
 			
 			<div class="row">
 							<div class="col-6 col-12-mobilep">
-							  <input name="name" type="text" required="required" placeholder="Full Name" autocomplete="on" />
+								<input type='hidden' name="Type" value='Shoppy Product Purchased:'/>
+								<input type='hidden' name="Name1" value='Name:'/>
+							  <input name="Name" type="text" required="required" placeholder="Full Name" autocomplete="on" />
 								
 								 	&nbsp;
 							</div>
 							<div class="col-6 col-12-mobilep">
-							  <input name="email" type="email" required="required" placeholder="Email" autocomplete="on" />
+								<input type='hidden' name="Email1" value='Email:'/>
+							  <input name="Email" type="email" required="required" placeholder="Email" autocomplete="on" />
 								
 									
 							</div>
@@ -145,9 +150,9 @@
 								
 							
 											
-											
+											<input type='hidden' name="Product1" value='Product:'/>
 								
-								<select name="$Product" required="required" id="demo-category">
+								<select name="Product" required="required" id="demo-category">
 														<option value="">Product</option>
 														<option value="Tidal">Tidal HiFi</option>
 														<option value="Disney+">Disney+</option>
@@ -182,8 +187,8 @@
 													</select>
 								
 								&nbsp;
-								
-								<select name="$Referral" required="required" id="demo-category">
+								<input type='hidden' name="Referral1" value='Refered from:'/>
+								<select name="Referral" required="required" id="demo-category">
 														<option value="">How Did You Find Us</option>
 														<option value="Instagram">Instagram</option>
 														<option value="Facebook">Facebook</option>
@@ -203,8 +208,8 @@
 								
 								
 								
-								
-											 <input name="$Optional" type="text"id="$Optional
+								<input type='hidden' name="Text1" value='Optional Info:'/>
+											 <input name="Text" type="text"id="$Optional
 " placeholder="Optional Feedback or Question" autocomplete="on" />
 								
 								

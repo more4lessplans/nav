@@ -102,27 +102,21 @@
 
 							<dl class="alt">
 								
-														
-<form action="https://getsimpleform.com/messages?form_api_token=568afc09cd59b87187daecf90da98f44" method="post">
-  
-  <input type='hidden' name='redirect_to' value='https://more4lessplans.ca/delivered' />
-	 
+													
+ <form action="https://api.staticforms.xyz/submit" method="post">
         <div class="row">
 							<div class="col-6 col-12-mobilep">
-								<input type='hidden' name="Type" value='Got a Question:'/>
-								<input type='hidden' name="Name1" value='Name:'/>
-							  <input name="Name" type="text" required="required" placeholder="Name" autocomplete="on" />
+							  <input name="name" type="text" required="required" placeholder="Name" autocomplete="on" />
 								
 								 	&nbsp;
 							</div>
 							<div class="col-6 col-12-mobilep">
-								<input type='hidden' name="Email1" value='Email:'/>
-							  <input name="Email" type="email" required="required" placeholder="Email" autocomplete="on" />
+							  <input name="email" type="email" required="required" placeholder="Email" autocomplete="on" />
 								
 									
 							</div>
 							<div class="col-12">
-							 <input name="Text" type="text" required="required" id="$Message" placeholder="Message" autocomplete="on" />
+							 <input name="$Text" type="text" required="required" id="$Message" placeholder="Message" autocomplete="on" />
 								
 								
 							
@@ -133,13 +127,17 @@
 								
    </div>
 											
-
+        <input type="text" name="honeypot" style="display:none">
+        <input type="hidden" name="accessKey" value="43871e39-8d96-4149-a500-dd573dc0d380">
+        <input type="hidden" name="subject" value="Question | more4less" />
+        <input type="hidden" name="replyTo" value="@">
+        <input type="hidden" name="redirectTo" value="http://more4lessplans.ca/delivered">
        
 											
 											<div class="col-12">
 								<ul class="actions special">
 									
-									<input type="submit" value="Submit" />
+									<input type="submit" value="Send" />
     </form>
 								
 												
