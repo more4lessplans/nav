@@ -127,11 +127,7 @@
 									
 					
 					
-										
-										
-								
-								 
-					<div id="smart-button-container">
+			<div id="smart-button-container">
       <div style="text-align: center;">
         <div id="paypal-button-container"></div>
       </div>
@@ -150,7 +146,7 @@
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"description":"Bottomless Data","amount":{"currency_code":"CAD","value":70}}]
+            purchase_units: [{"description":"Bottomless Data (SIM CARD)","amount":{"currency_code":"CAD","value":79.1,"breakdown":{"item_total":{"currency_code":"CAD","value":70},"shipping":{"currency_code":"CAD","value":0},"tax_total":{"currency_code":"CAD","value":9.1}}}}]
           });
         },
 
