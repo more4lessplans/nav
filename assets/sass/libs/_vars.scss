@@ -1,60 +1,51 @@
 // Misc.
 	$misc: (
-		z-index-base:		10000
+		z-index-base:		10000,
+		gallery-lightbox-opacity:		0.875
 	);
 
 // Duration.
 	$duration: (
-		transition:			0.2s
+		menu:				0.5s,
+		transition:			0.2s,
+		gallery-lightbox-fadein:		0.5s
 	);
 
 // Size.
 	$size: (
-		border-radius:		8px,
-		border-radius-main:	0.25em,
-		element-height:		2.75em,
-		element-margin:		2em,
-		inner:				64em
+		border-radius:		0.375rem,
+		element-height:		3.5rem,
+		element-margin:		3.5rem,
+		container-width:	66rem,
+		header-height:		2.5rem,
+		menu-width:			15rem
 	);
 
 // Font.
 	$font: (
-		family:				('Source Sans Pro', Helvetica, sans-serif),
+		family:				('Source Sans Pro', Arial, Helvetica, sans-serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				300,
-		weight-bold:		400,
-		letter-spacing:		-0.025em
+		weight-semibold:	400,
+		weight-bold:		700
 	);
 
 // Palette.
 	$palette: (
-		bg:					#935d8c,
-		fg:					rgba(255,255,255,0.65),
-		fg-bold:			#ffffff,
-		fg-light:			rgba(255,255,255,0.5),
-		border:				rgba(255,255,255,0.35),
-		border-bg:			rgba(255,255,255,0.075),
-		border2:			rgba(255,255,255,0.75),
-		border2-bg:			rgba(255,255,255,0.2),
+		bg:					#f7f7f7,
+		bg-alt:				#FFFFFF,
+		fg:					#363636,
+		fg-bold:			#363636,
+		fg-light:			rgba(54,54,54,0.388),
+		border:				rgba(54,54,54,0.169),
+		border-bg:			transparent,
 
-		invert: (
-			bg:				#ffffff,
-			bg-alt:			#f7f7f7,
-			fg:				#636363,
-			fg-bold:		#636363,
-			fg-light:		rgba(99,99,99,0.25),
-			border:			#dddddd,
-			border-bg:		rgba(222,222,222,0.25),
-			border2:		#dddddd,
-			border2-bg:		rgba(222,222,222,0.5),
+		accent1: (
+			bg:				#ea2654,
+			fg:				#FFFFFF,
+			fg-bold:		#FFFFFF,
+			fg-light:		rgba(255,255,255,0.4),
+			border:			rgba(255,255,255,0.25),
+			border-bg:		rgba(255,255,255,0.075)
 		),
-
-		accent:				#8cc9f0,
-		accent1:			#efa8b0,
-		accent2:			#c79cc8,
-		accent3:			#a89cc8,
-		accent4:			#9bb2e1,
-		accent5:			#8cc9f0,
-		bg1:				#e37682,
-		bg2:				#5f4d93
 	);

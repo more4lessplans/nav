@@ -1,7 +1,7 @@
 ///
-/// Stellar by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+/// Radiate by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
 ///
 
 /* Icons */
@@ -13,10 +13,39 @@
 
 		li {
 			display: inline-block;
-			padding: 0 0.65em 0 0;
+			margin: 0;
 
 			&:last-child {
-				padding-right: 0 !important;
+				padding-right: 0;
+			}
+
+			.icon {
+				@include vendor('display', 'flex');
+				@include vendor('align-items', 'center');
+				@include vendor('justify-content', 'center');
+				@include vendor('transition', (
+					'border #{_duration(transition)} ease-in-out'
+				));
+				border-radius: 100%;
+				width: 2.25rem;
+				height: 2.25rem;
+				padding: 0;
+				border: solid 1px _palette(border);
+
+				&:before {
+					@include vendor('transition', (
+						'color #{_duration(transition)} ease-in-out'
+					));
+					font-size: 1rem;
+					color: _palette(fg);
+				}
+
+				&:hover {
+					border-color: _palette(accent1, bg);
+					&:before {
+						color: _palette(accent1, bg);
+					}
+				}
 			}
 		}
 	}
