@@ -1,147 +1,116 @@
 ///
-/// Radiate by Pixelarity
-/// pixelarity.com | hello@pixelarity.com
-/// License: pixelarity.com/license
+/// Stellar by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
 /* Header */
 
-	@include keyframes('reveal-header') {
-		0% { top: -4em; opacity: 0; }
-		100% { top: 0; opacity: 1; }
-	}
-
-	body {
-		padding-top: _size(header-height);
-	}
-
 	#header {
-		@include vendor('align-items', 'center');
-		@include vendor('display', 'flex');
-		@include vendor('justify-content', 'space-between');
-		background: _palette(accent1, bg);
-		box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.11);
-		color: _palette(accent1, fg);
-		cursor: default;
-		height: _size(header-height);
-		left: 0;
-		line-height: _size(header-height);
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: _misc(z-index-base) + 1;
+		@include padding(5em, 5em, (0, 0, -2em, 0));
+		text-align: center;
 
-		> .logo {
-			color: _palette(accent1, fg-bold);
-			font-size: 1rem;
-			height: inherit;
-			line-height: inherit;
-			padding: 0 1.25rem;
-			text-decoration: none;
-
-			strong {
-				color: inherit;
-			}
+		h1 {
+			margin: 0 0 (_size(element-margin) * 0.125) 0;
 		}
 
-		> nav {
-			> a {
-				color: inherit;
-				display: inline-block;
-				padding: 0 0.75rem;
-				text-decoration: none;
-
-				&:hover {
-					color: _palette(accent1, fg-bold);
-				}
-
-				&[href="#menu"] {
-					@include icon(false, solid);
-					-webkit-tap-highlight-color: rgba(0,0,0,0);
-
-					span {
-						display: none;
-					}
-
-					&:before {
-						content: '\f0c9';
-						margin: 0;
-					}
-				}
-
-				& + a[href="#menu"]:last-child {
-					border-left: solid 1px _palette(accent1, border);
-					margin-left: 0.5rem;
-					padding-left: 1.25rem;
-				}
-
-				&:last-child {
-					padding-right: 1.25rem;
-				}
-			}
-		}
-
-		&.reveal {
-			@include vendor('animation', 'reveal-header 0.5s ease');
+		p {
+			font-size: 1.25em;
+			letter-spacing: _font(letter-spacing);
 		}
 
 		&.alt {
-			@include vendor('animation', 'none');
-			@include vendor('justify-content', 'flex-end');
-			background-color: transparent;
-			box-shadow: none;
-			height: _size(header-height) * 1.75;
-			line-height: _size(header-height) * 1.75;
-			position: absolute;
-			top: 0;
-			opacity: 1;
+			@include padding(6em, 5em, (1em, 0, 0, 0));
+
+			h1 {
+				font-size: 3.25em;
+			}
+
+			> * {
+				@include vendor('transition', 'opacity 3s ease');
+				@include vendor('transition-delay', '0.5s');
+				opacity: 1;
+			}
 
 			.logo {
-				display: none;
-			}
+				@include vendor('transition', (
+					'opacity 1.25s ease',
+					'transform 0.5s ease'
+				));
+				@include vendor('transition-delay', '0s');
+				display: block;
+				margin: 0 0 (_size(element-margin) * 0.75) 0;
 
-			> nav {
-				> a {
-					&:last-child {
-						padding-right: 1.75rem;
-					}
+				img {
+					display: block;
+					margin: 0 auto;
+					max-width: 75%;
 				}
 			}
 		}
-	}
 
-	@include breakpoint('<=medium') {
-		body {
-			padding-top: 44px;
+		@include breakpoint('<=large') {
+			@include padding(4em, 4em, (0, 0, -2em, 0));
+
+			&.alt {
+				@include padding(5em, 4em, (1em, 0, 0, 0));
+			}
 		}
 
-		#header {
-			height: 44px;
-			line-height: 44px;
+		@include breakpoint('<=medium') {
+			@include padding(4em, 3em, (0, 0, -2em, 0));
+
+			&.alt {
+				@include padding(4em, 3em, (1em, 0, 0, 0));
+			}
 		}
-	}
 
-	@include breakpoint('<=small') {
-		#header {
-			> nav {
-				> a {
-					padding: 0 0.5rem;
+		@include breakpoint('<=small') {
+			@include padding(3em, 2em, (0, 0, -1em, 0));
 
-					& + a[href="#menu"]:last-child {
-						margin-left: 0.25rem;
-						padding-left: 1rem;
-					}
+			p {
+				font-size: 1em;
+				letter-spacing: 0;
 
-					&:last-child {
-						padding-right: 1rem;
-					}
+				br {
+					display: none;
+				}
+			}
+
+			&.alt {
+				@include padding(3em, 2em, (1em, 0, 0, 0));
+
+				h1 {
+					font-size: 2.5em;
 				}
 			}
 		}
-	}
 
-	@include breakpoint('<=xsmall') {
-		#header {
-			min-width: 320px;
+		@include breakpoint('<=xsmall') {
+			@include padding(3em, 1.5em, (0, 0, -1em, 0));
+
+			&.alt {
+				@include padding(3em, 1.5em, (1em, 0, 0, 0));
+			}
+		}
+
+		@include breakpoint('<=xxsmall') {
+			@include padding(2.5em, 1em, (0, 0, -1em, 0));
+
+			&.alt {
+				@include padding(2.5em, 1em, (1em, 0, 0, 0));
+			}
+		}
+
+		body.is-preload & {
+			&.alt {
+				> * {
+					opacity: 0;
+				}
+
+				.logo {
+					@include vendor('transform', 'scale(0.8) rotate(-30deg)');
+				}
+			}
 		}
 	}

@@ -1,33 +1,60 @@
 ///
-/// Radiate by Pixelarity
-/// pixelarity.com | hello@pixelarity.com
-/// License: pixelarity.com/license
+/// Stellar by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
 /* Footer */
 
 	#footer {
-		text-align:center;
-		margin: 4rem 0 6rem 0;
+		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		@include padding(5em, 5em);
+		width: calc(100% + #{_size(element-margin)});
+		margin: 0 0 (_size(element-margin) * 1.5) (_size(element-margin) * -1);
 
-		p {
-			color: _palette(fg-light);
-			line-height: 1.75;
+		> * {
+			width: calc(50% - #{_size(element-margin)});
+			margin-left: _size(element-margin);
 		}
 
-		ul.icons {
-			margin-bottom: 1.5rem;
+		.copyright {
+			width: 100%;
+			margin: (_size(element-margin) * 1.25) 0 _size(element-margin) 0;
+			font-size: 0.8em;
+			text-align: center;
+		}
 
-			li {
-				margin: 0.5rem;
+		@include breakpoint('<=large') {
+			@include padding(4em, 4em);
+		}
+
+		@include breakpoint('<=medium') {
+			@include padding(4em, 3em);
+			display: block;
+			margin: 0 0 (_size(element-margin) * 1.5) 0;
+			width: 100%;
+
+			> * {
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: (_size(element-margin) * 1.5);
+			}
+
+			.copyright {
+				text-align: left;
 			}
 		}
 
 		@include breakpoint('<=small') {
-			margin: 2rem 0 4rem 0;
+			@include padding(3em, 2em);
+		}
 
-			ul.icons {
-				margin-bottom: 1rem;
-			}
+		@include breakpoint('<=xsmall') {
+			@include padding(3em, 1.5em);
+		}
+
+		@include breakpoint('<=xsmall') {
+			@include padding(2.5em, 1em);
 		}
 	}
